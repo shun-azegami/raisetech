@@ -11,40 +11,105 @@
     <title>Hamburger</title>
 </head>
 <body>
-    <header id="l-header"> <!-- ヘッダー -->
+
+<!-- ヘッダー -->
+    <header class="l-header">
         <div class="p-header__title">
-            <div class="p-header">
+            <div class="p-header__left">
                 <h1>Hamburger</h1>
             </div>
-            <div class="p-header__search">
-                <input type="search" name="search" placeholder="">
-                <input type="submit" name="submit" value="検索">
+            <div class="p-header__right">
+                <form action="post">
+                    <input type="text" name="search" placeholder="">
+                    <input type="submit" name="submit" value="検索">    
+                </form>
             </div>
         </div>
     </header>
-    <article> <!-- メインコンテンツ -->
-        <div> <!-- メインビジュアル -->
-            <h2></h2> <!-- 見出し -->
-            <img> <!-- 画像 -->
+<!-- メインコンテンツ -->
+    <article class="l-main">
+        <div class="p-main__image"> <!-- メインビジュアル -->
+            <p>ダミーサイト</p> <!-- 見出し -->
+            <img src="./img/main.jpg"> <!-- 画像 -->
         </div>
-        <div></div> <!-- Take Out -->
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
-        <div></div> <!-- Eat In -->
-        <ul>
-            <li></li>
-            <li></li>
-        </ul>
-</article>
-    <section> <!-- アクセス -->
-        <h2></h2> <!-- テキスト -->
-        <div></div> <!-- マップ -->
+
+        <div class="c-main__contents__wrap">
+            <div class="c-main__contents__top"> <!-- Take Out -->
+                <div class="c-main__contents__top__title">
+                    <img src="./img/take_out.jpg">
+                    <h2>Take Out</h2>
+                    <div class="c-main__contents__top__border"></div> <!-- 下線 -->
+                    <div class="c-main__contents__top__uppertext">
+                        <h3>小見出し</h3>
+                        <p>テキストが入ります</p>
+                    </div>
+                    <div class="c-main__contents__top__lowertext">
+                        <h3>小見出し</h3>
+                        <p>テキストが入ります</p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-main__contents__bottom"> <!-- Eat In -->
+                <div class="c-main__contents__bottom__title">
+                    <img src="./img/eat_in.jpg">
+                    <h2>Eat In</h2>
+                    <div class="c-main__contents__bottom__border"></div> <!-- 下線 -->
+                    <div class="c-main__contents__bottom__uppertext">
+                        <h3>小見出し</h3>
+                        <p>テキストが入ります</p>
+                    </div>
+                    <div class="c-main__contents__bottom__lowertext">
+                        <h3>小見出し</h3>
+                        <p>テキストが入ります</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <section class="c-map"> <!-- アクセス -->
+        <div class="c-map__text"> <!-- テキスト -->
+            <h2>見出しが入ります</h2>
+            <div class="c-map__text__border"></div> <!-- 下線 -->
+            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        </div>
+        <div class="c-map__image">
+            <img src="img/map.jpg">
+        </div> <!-- マップ -->
     </section>
-    <aside></aside> <!-- サイドメニュー -->
-    <footer> <!-- フッター -->
-        <address></address> <!-- アドレス -->
+    <aside class="c-sidebar">
+        <h2>Menu</h2>
+        <h3>バーガー</h3>
+        <ul>
+            <li><a>ハンバーガー</a></li>
+            <li><a>チーズバーガー</a></li>
+            <li><a>テリヤキバーガー</a></li>
+            <li><a>アボカドバーガー</a></li>
+            <li><a>フィッシュバーガー</a></li>
+            <li><a>ベーコンバーガー</a></li>
+            <li><a>チキンバーガー</a></li>
+        </ul>
+        <h3>サイド</h3>
+        <ul>
+            <li><a>ポテト</a></li>
+            <li><a>サラダ</a></li>
+            <li><a>ナゲット</a></li>
+            <li><a>コーン</a></li>
+        </ul>
+        <h3>ドリンク</h3>
+        <ul>
+            <li><a>ファンタ</a></li>
+            <li><a>オレンジ</a></li>
+            <li><a>アップル</a></li>
+            <li><a>紅茶 (Ice/Hot)</a></li>
+            <li><a>コーヒー (Ice/Hot)</a></li>
+        </ul>
+    </aside> <!-- サイドメニュー -->
+    <footer class="l-footer"> <!-- フッター -->
+        <address>
+            <a>ショップ情報</a>
+            <a>ヒストリー</a>
+        </address> <!-- アドレス 擬似要素before afterで縦線入れる -->
+        <small>Copyright: RaiseTech</small>
     </footer>
     <script src="./js/script.js"></script>
 </body>
