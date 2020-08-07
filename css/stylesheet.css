@@ -1,4 +1,85 @@
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "M PLUS 1p", sans-serif;
+  color: #707070;
+}
+
+.l-header {
+  background-color: #FFF7EF;
+  font-family: "Roboto", sans-serif;
+  width: 155.3rem;
+  height: 21.7rem;
+}
+
+.l-footer {
+  background-color: #9D8670;
+  color: white;
+}
+
+.p-main__image {
+  position: relative;
+}
+
+.p-main__image img {
+  width: 100%;
+}
+
+.p-main__image p {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+}
+
+.c-main__contents__top {
+  position: relative;
+}
+
+.c-main__contents__top__image {
+  width: 100%;
+}
+
+.c-main__contents__top__text {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+}
+
+.c-main__contents__bottom {
+  position: relative;
+}
+
+.c-main__contents__bottom__image {
+  width: 100%;
+}
+
+.c-main__contents__bottom__text {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+}
+
+.c-map {
+  position: relative;
+}
+
+.c-map__image {
+  width: 100%;
+}
+
+.c-map__text {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+}
+
+.c-sidebar {
+  background-color: #F2EDE9;
 }
 /*# sourceMappingURL=stylesheet.css.map */

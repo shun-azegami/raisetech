@@ -1,7 +1,83 @@
 $font-primary: 'M PLUS 1p', sans-serif;
 $font-secondary: 'Roboto', sans-serif;
+$brown: #707070;
+$header-color: #FFF7EF;
+$sidebar-color: #F2EDE9;
+$footer-color: #9D8670;
 
+html{
+    font-size: 10px;
+}
 
 body {
     font-family: $font-primary;
+    color: $brown;
+}
+
+.l-header {
+    background-color: $header-color;
+    font-family: $font-secondary;
+    width: 155.3rem;
+    height: 21.7rem;
+}
+
+.l-footer {
+    background-color: $footer-color;
+    color: white;
+}
+
+.p-main__image {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    p {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+    }
+}
+
+.c-main__contents__top {
+    position: relative;
+    &__image {
+        width: 100%;
+    }
+    &__text {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+    }
+}
+
+.c-main__contents__bottom {
+    position: relative;
+    &__image {
+        width: 100%;
+    }
+    &__text {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+    }
+}
+
+.c-map {
+    position: relative;
+    &__image {
+        width: 100%;
+    }
+    &__text {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+    }
+}
+
+.c-sidebar {
+    background-color: $sidebar-color;
 }
