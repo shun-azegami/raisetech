@@ -12,24 +12,45 @@ html{
 body {
     font-family: $font-primary;
     color: $brown;
+    text-align: center;
 }
+
+a{
+    text-decoration: none;
+    color: $brown;
+    display: block;
+    &:hover, &:active, &:visited {
+        color: $brown;
+    }
+  }
+
 
 .l-header {
     background-color: $header-color;
     font-family: $font-secondary;
-    width: 155.3rem;
+    width: 37.5rem;
     height: 21.7rem;
+    &__title {
+        font-size: 3.5rem;
+    }
+    &__searchform {
+        font-size: 2rem;
+    }
 }
 
 .l-footer {
     background-color: $footer-color;
     color: white;
+    width: 37.5rem;
+    height: 21.7rem;
 }
 
 .p-main__image {
     position: relative;
     img {
-        width: 100%;
+        width: 37.5rem;
+        height: 28.5rem;
+        object-fit: cover;
     }
     p {
         position: absolute;
@@ -39,10 +60,18 @@ body {
     }
 }
 
+.c-main__contents__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .c-main__contents__top {
     position: relative;
+    margin: 2rem, 2rem, 1rem, 2rem;
     &__image {
-        width: 100%;
+        width: 33.5rem;
+        height: 64.2rem;
     }
     &__text {
         position: absolute;
@@ -54,8 +83,10 @@ body {
 
 .c-main__contents__bottom {
     position: relative;
+    margin: 1rem, 2rem, 2rem, 2rem;
     &__image {
-        width: 100%;
+        width: 33.5rem;
+        height: 64.2rem;
     }
     &__text {
         position: absolute;
@@ -67,17 +98,25 @@ body {
 
 .c-map {
     position: relative;
+
     &__image {
-        width: 100%;
+        width: 37.5rem;
+        height: 69.1rem;
     }
     &__text {
         position: absolute;
+        width: 37.5rem;
+        height: 64.9rem;
         color: white;
         top: 0;
         left: 0;
     }
 }
 
-.c-sidebar {
+.p-sidebar {
     background-color: $sidebar-color;
+    width: 37.5rem;
+    li {
+        list-style-type: none;
+    }
 }

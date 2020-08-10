@@ -5,18 +5,39 @@ html {
 body {
   font-family: "M PLUS 1p", sans-serif;
   color: #707070;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+  display: block;
+}
+
+a:hover, a:active, a:visited {
+  color: #707070;
 }
 
 .l-header {
   background-color: #FFF7EF;
   font-family: "Roboto", sans-serif;
-  width: 155.3rem;
+  width: 37.5rem;
   height: 21.7rem;
+}
+
+.l-header__title {
+  font-size: 3.5rem;
+}
+
+.l-header__searchform {
+  font-size: 2rem;
 }
 
 .l-footer {
   background-color: #9D8670;
   color: white;
+  width: 37.5rem;
+  height: 21.7rem;
 }
 
 .p-main__image {
@@ -24,7 +45,10 @@ body {
 }
 
 .p-main__image img {
-  width: 100%;
+  width: 37.5rem;
+  height: 28.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-main__image p {
@@ -34,12 +58,24 @@ body {
   left: 0;
 }
 
+.c-main__contents__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .c-main__contents__top {
   position: relative;
+  margin: 2rem, 2rem, 1rem, 2rem;
 }
 
 .c-main__contents__top__image {
-  width: 100%;
+  width: 33.5rem;
+  height: 64.2rem;
 }
 
 .c-main__contents__top__text {
@@ -51,10 +87,12 @@ body {
 
 .c-main__contents__bottom {
   position: relative;
+  margin: 1rem, 2rem, 2rem, 2rem;
 }
 
 .c-main__contents__bottom__image {
-  width: 100%;
+  width: 33.5rem;
+  height: 64.2rem;
 }
 
 .c-main__contents__bottom__text {
@@ -69,17 +107,25 @@ body {
 }
 
 .c-map__image {
-  width: 100%;
+  width: 37.5rem;
+  height: 69.1rem;
 }
 
 .c-map__text {
   position: absolute;
+  width: 37.5rem;
+  height: 64.9rem;
   color: white;
   top: 0;
   left: 0;
 }
 
-.c-sidebar {
+.p-sidebar {
   background-color: #F2EDE9;
+  width: 37.5rem;
+}
+
+.p-sidebar li {
+  list-style-type: none;
 }
 /*# sourceMappingURL=stylesheet.css.map */
