@@ -7,8 +7,8 @@ $sidebar-color: #F2EDE9;
 $footer-color: #9D8670;
 
 $breakpoints: (
-  'tablet': 'screen and (min-width: 375px)',
-  'pc': 'screen and (min-width: 960px)',
+  'tablet': 'screen and (min-width: 768px)',
+  'pc': 'screen and (min-width: 1020px)',
 ) !default;
 
 @mixin mq($breakpoint: sp) {
@@ -65,9 +65,15 @@ a{
             height: 4.5rem;
             padding: 0.2rem 1rem;
             background: url('../img/glass_icon.png') no-repeat;
-            background-position: 5% 50%;
+            background-position: 5% 50%; /* 虫眼鏡アイコンを、左5%、上下は中央に */
             background-color: white;
             overflow: hidden; /* はみ出たテキストを隠す */
+
+            @include mq('tablet') {
+                /* 最低幅はスマホ表示、それ以降は画面の50%分 */
+                width: 50%;
+                min-width: 23rem;
+            }
         }
 
         input[type="submit"] {
@@ -118,7 +124,7 @@ a{
         font-size: 3rem;
         font-weight: lighter;
         color: white;
-        margin-left: 5%;
+        margin-left: 7%;
     }
 }
 
@@ -150,8 +156,8 @@ a{
         }
 
         &-img {
-            max-width: 100%;
-            max-height: 100%;
+            min-width: 100%;
+            min-height: 100%;
         }
 
         &-wrap {
@@ -185,19 +191,22 @@ a{
         }
 
     }
+
+    @include mq('tablet') {
+    }
+
 }
 
 .p-access {
     position: relative;
-    width: 100%;
-    height: 70rem;
-    background-image: url("../img/access_sp.png");
+    height: 69rem;
+    margin-top: 5%;
+    background-image: url("../img/access.png");
     background-position: 50% 50%; /* 画像中央を起点に表示 */
-    background-size: cover; /* 縦横比を維持しながら全体を覆うように表示 */
     background-color: rgba($color: black, $alpha: 0.7);
 
     &__background {
-        width: 100%;
+        max-width: 95rem;
         height: 42rem;
         background-color: black;
         opacity: 0.5;
@@ -206,10 +215,11 @@ a{
     &__texts {
         position: absolute;
         width: 100%;
+        height: 100%;
         padding: 3rem;
+        top: 0;
         font-family: $font-secondary;
         color: white;
-        top: 0;
 
         &-title {
             font-size: 3rem;
@@ -228,6 +238,11 @@ a{
             line-height: 2;
         }
     }
+
+    @include mq('tablet') {
+        height: 100%;
+    }
+
 }
 
 .l-footer {
