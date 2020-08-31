@@ -1,6 +1,7 @@
-$font-primary: 'M PLUS 1p', sans-serif;
-$font-secondary: 'Roboto', sans-serif;
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'M+ Type-2 (general-j) Light', sans-serif;
 $brown: #707070;
+$black: #3C2A10;
 $header-color: #FFF7EF;
 $sidebar-color: #F2EDE9;
 $footer-color: #9D8670;
@@ -23,6 +24,9 @@ html{
 body {
     margin: auto;
     font-family: $font-primary;
+    letter-spacing: 0.2em;
+    line-height: 1;
+    text-decoration: none;
     color: $brown;
     min-width : 320px;
 }
@@ -38,7 +42,6 @@ a{
 
 .l-header {
     background-color: $header-color;
-    font-family: $font-secondary;
     width: 100%;
     height: 21.7rem;
     margin: 0 auto;
@@ -58,6 +61,7 @@ a{
 
 .c-menu {
     font-size: 2rem;
+    font-weight: bold;
     text-align: right;
     padding: 2rem 2rem 0 0;
 }
@@ -85,8 +89,9 @@ a{
         background-image: url(../img/main.jpg);
     }
     
-    &__texts {
+    &__title {
         font-size: 3rem;
+        font-weight: lighter;
         color: white;
         margin-left: 5%;
     }
@@ -129,6 +134,8 @@ a{
                 background-color: rgba($color: white, $alpha: 0.7);
                 width: 100%;
                 margin-top: 1rem;
+                font-family: $font-secondary;
+                color: $black;
             }
 
             &-texts-copy {
@@ -147,6 +154,49 @@ a{
     }
 }
 
+.p-access {
+    position: relative;
+    width: 100%;
+    height: 70rem;
+    background-image: url("../img/access_sp.png");
+    background-position: 50% 50%; /* 画像中央を起点に表示 */
+    background-size: cover; /* 縦横比を維持しながら全体を覆うように表示 */
+    background-color: rgba($color: black, $alpha: 0.7);
+
+    &__background {
+        width: 100%;
+        height: 42rem;
+        background-color: black;
+        opacity: 0.5;
+    }
+
+    &__texts {
+        position: absolute;
+        width: 100%;
+        padding: 3rem;
+        font-family: $font-secondary;
+        color: white;
+        top: 0;
+
+        &-title {
+            font-size: 3rem;
+            &:after {
+                content: "";
+                display: block;
+                width: 7.5rem;
+                height: 0.2rem;
+                background-color: white;
+                margin: 2rem 0 2rem 0;
+            }
+        }
+
+        &-p {
+            font-size: 1.4rem;
+            line-height: 2;
+        }
+    }
+}
+
 .l-footer {
     &__wrap {
         display: flex;
@@ -157,19 +207,18 @@ a{
         margin: 0 auto;
         height: 15rem;
         background-color: $footer-color;
+        font-family: $font-secondary;
         color: white;
     }
     &__nav {
-        display: flex;
-        &-item {
-            padding-right: 1rem;
-            a {
-                font-size: 1.4rem;
-                letter-spacing: 0.2em;
-                line-height: 1;
-                text-decoration: none;
-                color: white;
-            }
+        a {
+            display: inline-block;
+            font-size: 1.4rem;
+            color: white;
+        }
+        a:first-child:after {
+            content: "|";
+            margin-left: 0.7rem;
         }
     }
     &__cr {
