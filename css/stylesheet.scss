@@ -5,112 +5,61 @@ $header-color: #FFF7EF;
 $sidebar-color: #F2EDE9;
 $footer-color: #9D8670;
 
+$breakpoints: (
+  'tablet': 'screen and (min-width: 375px)',
+  'pc': 'screen and (min-width: 960px)',
+) !default;
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
 html{
-    font-size: 10px;
+    font-size: 62.5%;
 }
 
 body {
+    margin: auto;
     font-family: $font-primary;
     color: $brown;
-    text-align: center;
+    min-width : 320px;
 }
 
 a{
     text-decoration: none;
-    color: $brown;
     display: block;
-    &:hover, &:active, &:visited {
+    &:hover, &:active, &:link, &:visited {
         color: $brown;
     }
-  }
+}
 
 
 .l-header {
     background-color: $header-color;
     font-family: $font-secondary;
-    width: 37.5rem;
+    width: 100%;
     height: 21.7rem;
+    margin: 0 auto;
+    text-align: center;
+
     &__title {
         font-size: 3.5rem;
     }
-    &__searchform {
+
+    &__search {
+        display: block;
         font-size: 2rem;
+        padding-top: 4rem;
     }
+    
 }
 
-.l-footer {
-    background-color: $footer-color;
-    color: white;
-    width: 37.5rem;
-    height: 21.7rem;
-}
-
-.p-main__image {
-    position: relative;
-    img {
-        width: 37.5rem;
-        height: 28.5rem;
-        object-fit: cover;
-    }
-    p {
-        position: absolute;
-        color: white;
-        top: 0;
-        left: 0;
-    }
-}
-
-.c-main__contents__wrap {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.c-main__contents__top {
-    position: relative;
-    margin: 2rem, 2rem, 1rem, 2rem;
-    &__image {
-        width: 33.5rem;
-        height: 64.2rem;
-    }
-    &__text {
-        position: absolute;
-        color: white;
-        top: 0;
-        left: 0;
-    }
-}
-
-.c-main__contents__bottom {
-    position: relative;
-    margin: 1rem, 2rem, 2rem, 2rem;
-    &__image {
-        width: 33.5rem;
-        height: 64.2rem;
-    }
-    &__text {
-        position: absolute;
-        color: white;
-        top: 0;
-        left: 0;
-    }
-}
-
-.c-map {
-    position: relative;
-
-    &__image {
-        width: 37.5rem;
-        height: 69.1rem;
-    }
-    &__text {
-        position: absolute;
-        width: 37.5rem;
-        height: 64.9rem;
-        color: white;
-        top: 0;
-        left: 0;
-    }
+.c-menu {
+    font-size: 2rem;
+    text-align: right;
+    padding: 2rem 2rem 0 0;
 }
 
 .p-sidebar {
@@ -118,5 +67,112 @@ a{
     width: 37.5rem;
     li {
         list-style-type: none;
+    }
+    display: none;
+}
+
+.c-mv {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    min-height: 27.5rem;
+    background-image: url(../img/mv_sp.png);
+    background-position: 50% 50%; /* 画像中央を起点に表示 */
+    background-size: cover; /* 縦横比を維持しながら全体を覆うように表示 */
+
+    @include mq('tablet') {
+        background-image: url(../img/main.jpg);
+    }
+    
+    &__texts {
+        font-size: 3rem;
+        color: white;
+        margin-left: 5%;
+    }
+}
+
+.p-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    &__item {
+        position: relative;
+        display: flex;
+        margin: 1rem;
+        width: 33.5rem;
+        height: 64rem;
+
+        &-title {
+            position: absolute;
+            color: white;
+            font-size: 3.5rem;
+            margin: 1rem;
+        }
+
+        &-img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        &-wrap {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 1rem;
+            bottom: 0;
+            
+            &-top, &-bottom {
+                background-color: rgba($color: white, $alpha: 0.7);
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            &-texts-copy {
+                font-size: 2rem;
+                padding: 1.5rem;
+            }
+
+            &-texts-p {
+                font-size: 1.5rem;
+                padding: 0 1.5rem 1.5rem 1.5rem;
+                line-height: 1.5;
+            }
+
+        }
+
+    }
+}
+
+.l-footer {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        margin: 0 auto;
+        height: 15rem;
+        background-color: $footer-color;
+        color: white;
+    }
+    &__nav {
+        display: flex;
+        &-item {
+            padding-right: 1rem;
+            a {
+                font-size: 1.4rem;
+                letter-spacing: 0.2em;
+                line-height: 1;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    &__cr {
+        padding-top: 1rem;
     }
 }

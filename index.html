@@ -10,76 +10,20 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <title>Hamburger</title>
 </head>
+
 <body>
 
-<!-- ヘッダー -->
-    <header class="l-header">
-        <div class="l-header__title">
-            <div class="l-header__title">
-                <h1>Hamburger</h1>
-            </div>
-            <div class="l-header__searchform">
-                <form action="post">
-                    <input type="text" name="search" placeholder="">
-                    <input type="submit" name="submit" value="検索">    
-                </form>
-            </div>
-        </div>
+    <header class="l-header"> <!-- ヘッダー -->
+        <div class="c-menu">
+            <span class="c-menu__button">Menu</span>
+        </div> <!-- メニュー -->
+        <h1 class="l-header__title">Hamburger</h1>
+        <form class="l-header__search" action="#" method="GET"> <!-- 検索 -->
+            <input type="search" name="search">
+            <input type="submit" value="検索">
+        </form>
     </header>
-<!-- メインコンテンツ -->
-    <article class="l-main">
-        <div class="p-main__image"> <!-- メインビジュアル -->
-            <img src="./img/main.jpg" alt="main_image"> <!-- 画像 -->
-            <p>ダミーサイト</p> <!-- 見出し -->
-        </div>
 
-        <div class="c-main__contents__wrap">
-            <div class="c-main__contents__top"> <!-- Take Out -->
-                <div class="c-main__contents__top__image">
-                    <img src="./img/take_out.jpg" alt="take_out_image">
-                </div>
-                <div class="c-main__contents__top__text">
-                    <h2>Take Out</h2>
-                    <div class="c-main__contents__top__border"></div> <!-- 下線 -->
-                    <div class="c-main__contents__top__uppertext">
-                        <h3>小見出し</h3>
-                        <p>テキストが入ります</p>
-                    </div>
-                    <div class="c-main__contents__top__lowertext">
-                        <h3>小見出し</h3>
-                        <p>テキストが入ります</p>
-                    </div>
-                </div>
-            </div>
-            <div class="c-main__contents__bottom"> <!-- Eat In -->
-                <div class="c-main__contents__bottom__image">
-                    <img src="./img/eat_in.jpg" alt="eat_in_image">
-                </div>
-                <div class="c-main__contents__bottom__text">
-                    <h2>Eat In</h2>
-                    <div class="c-main__contents__bottom__border"></div> <!-- 下線 -->
-                    <div class="c-main__contents__bottom__uppertext">
-                        <h3>小見出し</h3>
-                        <p>テキストが入ります</p>
-                    </div>
-                    <div class="c-main__contents__bottom__lowertext">
-                        <h3>小見出し</h3>
-                        <p>テキストが入ります</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
-    <section class="c-map"> <!-- アクセス -->
-        <div class="c-map__image">
-            <img src="img/map.jpg" alt="map_image">
-        </div> <!-- マップ -->
-        <div class="c-map__text"> <!-- テキスト -->
-            <h2>見出しが入ります</h2>
-            <div class="c-map__text__border"></div> <!-- 下線 -->
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-        </div>
-    </section>
     <aside class="p-sidebar">
         <h2>Menu</h2>
         <h3>バーガー</h3>
@@ -107,14 +51,74 @@
             <li><a href="#">紅茶 (Ice/Hot)</a></li>
             <li><a href="#">コーヒー (Ice/Hot)</a></li>
         </ul>
-    </aside> <!-- サイドメニュー -->
-    <footer class="l-footer"> <!-- フッター -->
-        <address>
-            <a href="#">ショップ情報</a>
-            <a href="#">ヒストリー</a>
-        </address> <!-- アドレス 擬似要素before afterで縦線入れる -->
-        <small>Copyright: RaiseTech</small>
+    </aside>
+
+    <div class="c-mv"> <!-- メインビジュアル -->
+        <h2 class="c-mv__texts">ダミーサイト</h2> <!-- テキスト -->
+    </div>
+
+    <article class="p-main"> <!-- メインコンテンツ -->
+        <div class="p-main__item"> <!-- Take Out -->
+            <img class="p-main__item-img" src="./img/take_out.jpg" alt="take_out">
+            <h3 class="p-main__item-title">Take Out</h3>
+            <div class="p-main__item-wrap">
+                <div class="p-main__item-wrap-top">
+                    <div class="p-main__item-wrap-texts"> <!-- 小見出しと説明 -->
+                        <h4 class="p-main__item-wrap-texts-copy">小見出し</h4>
+                        <p class="p-main__item-wrap-texts-p">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                    </div>
+                </div>
+                <div class="p-main__item-wrap-bottom">
+                    <div class="p-main__item-wrap-texts"> <!-- 小見出しと説明 -->
+                        <h4 class="p-main__item-wrap-texts-copy">小見出し</h4>
+                        <p class="p-main__item-wrap-texts-p">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-main__item"> <!-- Eat In -->
+            <img class="p-main__item-img" src="./img/eat_in.jpg" alt="eat_in">
+            <h3 class="p-main__item-title">Eat In</h3>
+            <div class="p-main__item-wrap">
+                <div class="p-main__item-wrap-top">
+                    <div class="p-main__item-wrap-texts"> <!-- 小見出しと説明 -->
+                        <h4 class="p-main__item-wrap-texts-copy">小見出し</h4>
+                        <p class="p-main__item-wrap-texts-p">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                    </div>
+                </div>
+                <div class="p-main__item-wrap-bottom">
+                    <div class="p-main__item-wrap-texts"> <!-- 小見出しと説明 -->
+                        <h4 class="p-main__item-wrap-texts-copy">小見出し</h4>
+                        <p class="p-main__item-wrap-texts-p">説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div class="p-access"> <!-- アクセス -->
+        <img class="access__img"> <!-- マップ -->
+        <div class="access__texts"> <!-- 案内文 -->
+            <div class="access__texts-background"></div> <!-- 半透明用div -->
+            <p class="access__texts-p"></p>
+        </div>
+    </div>
+
+    <footer class="l-footer">
+        <div class="l-footer__wrap">
+            <div class="l-footer__nav">
+                <div class="l-footer__nav-item">
+                    <a href="#">ショップ情報</a>
+                </div>
+                <div class="l-footer__nav-item">
+                    <a href="#">ヒストリー</a>
+                </div>
+            </div>
+            <div class="l-footer__cr">Copyright: RaiseTech</div>
+        </div>
     </footer>
+
     <script src="./js/script.js"></script>
+    
 </body>
 </html>
