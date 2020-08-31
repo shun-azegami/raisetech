@@ -49,12 +49,37 @@ a{
 
     &__title {
         font-size: 3.5rem;
+        padding: 2rem;
     }
 
     &__search {
         display: block;
-        font-size: 2rem;
-        padding-top: 4rem;
+        padding-top: 2rem;
+        font-size: 1.5rem;
+        font-family: $font-secondary;
+    
+        input[type="search"] {
+            border: 0.1rem solid #707070;
+            border-radius: 1rem;
+            width: 23rem;
+            height: 4.5rem;
+            padding: 0.2rem 1rem;
+            background: url('../img/glass_icon.png') no-repeat;
+            background-position: 5% 50%;
+            background-color: white;
+            overflow: hidden; /* はみ出たテキストを隠す */
+        }
+
+        input[type="submit"] {
+            border: 0.1rem solid #707070;
+            border-radius: 1rem;
+            background: transparent linear-gradient(180deg, #F2EDE9 0%, #DED8D3 100%) 0% 0% no-repeat padding-box;
+            width: 7.8rem;
+            height: 4.5rem;
+            padding: 0.2rem 1rem;
+            color: $brown;
+        }
+
     }
     
 }
@@ -63,7 +88,7 @@ a{
     font-size: 2rem;
     font-weight: bold;
     text-align: right;
-    padding: 2rem 2rem 0 0;
+    padding: 1.5rem 1rem 0 0;
 }
 
 .p-sidebar {
@@ -81,7 +106,7 @@ a{
     max-width: 100%;
     width: 100%;
     min-height: 27.5rem;
-    background-image: url(../img/mv_sp.png);
+    background: url(../img/mv_sp.png) no-repeat;
     background-position: 50% 50%; /* 画像中央を起点に表示 */
     background-size: cover; /* 縦横比を維持しながら全体を覆うように表示 */
 
@@ -113,7 +138,15 @@ a{
             position: absolute;
             color: white;
             font-size: 3.5rem;
-            margin: 1rem;
+            margin: 2rem 0 0 1rem;
+            &:after {
+                content: "";
+                display: block;
+                width: 4rem;
+                height: 0.4rem;
+                background-color: white;
+                margin-top: 2rem;
+            }
         }
 
         &-img {

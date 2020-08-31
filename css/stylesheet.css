@@ -32,19 +32,45 @@ a:hover, a:active, a:link, a:visited {
 
 .l-header__title {
   font-size: 3.5rem;
+  padding: 2rem;
 }
 
 .l-header__search {
   display: block;
-  font-size: 2rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  font-family: "M+ Type-2 (general-j) Light", sans-serif;
+}
+
+.l-header__search input[type="search"] {
+  border: 0.1rem solid #707070;
+  border-radius: 1rem;
+  width: 23rem;
+  height: 4.5rem;
+  padding: 0.2rem 1rem;
+  background: url("../img/glass_icon.png") no-repeat;
+  background-position: 5% 50%;
+  background-color: white;
+  overflow: hidden;
+  /* はみ出たテキストを隠す */
+}
+
+.l-header__search input[type="submit"] {
+  border: 0.1rem solid #707070;
+  border-radius: 1rem;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#F2EDE9), to(#DED8D3)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #F2EDE9 0%, #DED8D3 100%) 0% 0% no-repeat padding-box;
+  width: 7.8rem;
+  height: 4.5rem;
+  padding: 0.2rem 1rem;
+  color: #707070;
 }
 
 .c-menu {
   font-size: 2rem;
   font-weight: bold;
   text-align: right;
-  padding: 2rem 2rem 0 0;
+  padding: 1.5rem 1rem 0 0;
 }
 
 .p-sidebar {
@@ -67,7 +93,7 @@ a:hover, a:active, a:link, a:visited {
   max-width: 100%;
   width: 100%;
   min-height: 27.5rem;
-  background-image: url(../img/mv_sp.png);
+  background: url(../img/mv_sp.png) no-repeat;
   background-position: 50% 50%;
   /* 画像中央を起点に表示 */
   background-size: cover;
@@ -112,7 +138,16 @@ a:hover, a:active, a:link, a:visited {
   position: absolute;
   color: white;
   font-size: 3.5rem;
-  margin: 1rem;
+  margin: 2rem 0 0 1rem;
+}
+
+.p-main__item-title:after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.4rem;
+  background-color: white;
+  margin-top: 2rem;
 }
 
 .p-main__item-img {
